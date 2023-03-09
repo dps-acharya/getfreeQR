@@ -1,40 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Free QR</title>
+</head>
+
 <body>
-<input type="text" id="qrText"/>
-<button id="generate" onclick="generateQRCode();">Generate</button><br>
-<canvas id="qr"></canvas>
+    <input type="text" id="qrText"/>
+    <button id="generate" onclick="generateQRCode();">Generate</button><br>
+    <canvas id="qr"></canvas>
 
-<script src="qrious.js"></script>
-<script>
-
-    const generateQRCode = () => {
-        let qr;
-        (function() {
-            qr = new QRious({
-                element: document.getElementById('qr'),
-                value: "DPS",
-                size:500,
-                padding: 25
+    <script src="qrious.js"></script>
+    <script>
+        const generateQRCode = () => {
+            let qr;
+            (function() {
+                qr = new QRious({
+                    element: document.getElementById('qr'),
+                    value: "DPS",
+                    size:500,
+                    padding: 25
+                });
+            })();
+            const qrText = document.getElementById('qrText').value;
+            qr.set({
+                value: qrText,
             });
-        })();
-        const qrText = document.getElementById('qrText').value;
-        qr.set({
-            value: qrText,
-        });
-    };
+        };
 
 
-</script>
+    </script>
 </body>
 </html>
-<!--
-var qr = new QRious();
-qr.background = 'green';
-qr.backgroundAlpha = 0.8;
-qr.foreground = 'blue';
-qr.foregroundAlpha = 0.8;
-qr.level = 'H';
-qr.padding = 25;
-qr.size = 500;
-qr.value = 'https://github.com/neocotic/qrious';-->
