@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/pico.min.css">
     <title>Generate Free QR</title>
 </head>
 
 <body>
-    <input type="text" id="qrText"/>
-    <button id="generate" onclick="generateQRCode();">Generate</button><br>
-    <canvas id="qr"></canvas>
+    <main class="container-fluid">
+        <h1>Generate Free QR</h1>
+        <h6>Free to use QR Generator</h6>
+        <hr>
+        <input type="text" id="qrText"/>
+        <button id="generate" onclick="generateQRCode();">Generate</button><br>
+        <canvas id="qr"></canvas>
+
+    </main>
+    <footer>
+        <p>Made with ❤️ by Dipesh Acharya</p>
+    </footer>
 
     <script src="qrious.js"></script>
     <script>
