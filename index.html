@@ -7,19 +7,39 @@
     <title>Generate Free QR</title>
 </head>
 
-<body>
-    <main class="container-fluid">
-        <h1>Generate Free QR</h1>
-        <h6>Free to use QR Generator</h6>
-        <hr>
-        <input type="text" id="qrText"/>
-        <button id="generate" onclick="generateQRCode();">Generate</button><br>
-        <canvas id="qr"></canvas>
+<body class="container">
+<header class="container grid">
+    <nav>
+        <hgroup>
+            <h2>Generate Free QR</h2>
+            <p>Free to use QR Generator</p>
+        </hgroup>
+        <hgroup>
+            <p>Made with ❤️ by</p>
+            <h6><a href="https://www.linkedin.com/in/dpsacharya/" target="_blank">Dipesh Acharya</a></h6>
+        </hgroup>
+
+    </nav>
+
+</header>
+    <main class="container">
+
+        <div class="grid">
+            <div>
+                <input type="text" id="qrText" placeholder="Enter any text, links, codes and more..."/>
+                <button id="generate" onclick="generateQRCode();">Generate</button><br>
+            </div>
+            <div>
+                <canvas id="qr"></canvas>
+            </div>
+
+        </div>
+
+
+
 
     </main>
-    <footer>
-        <p>Made with ❤️ by Dipesh Acharya</p>
-    </footer>
+
 
     <script src="qrious.js"></script>
     <script>
